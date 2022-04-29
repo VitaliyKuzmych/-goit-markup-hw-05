@@ -30,7 +30,7 @@
 
           <ul class="site-nav list">
             <li class="item">
-              <a href="" class="link">Студия</a>
+              <a href="" class="link current">Студия</a>
             </li>
             <li class="item">
               <a href="./portfolio.html" class="link">Портфолио</a>
@@ -44,13 +44,13 @@
         <ul class="kontact list">
           <li class="item">
             <a href="mailto:info@devstudio.com" class="decoration colorhov">
-              <svg class="color-icon colorhov" width="16px" height="12px">
+              <svg class="color-icon" width="16px" height="12px">
                 <use href="./images/sprite.svg#icon-imail"></use>
               </svg>info@devstudio.com</a>
           </li>
           <li class="item">
             <a href="tel:+380961111111" class="decoration colorhov">
-              <svg class="color-icon colorhov" width="10px" height="16px">
+              <svg class="color-icon" width="10px" height="16px">
                 <use href="./images/sprite.svg#icon-phone"></use></svg>+380961111111</a>
           </li>
         </ul>
@@ -135,25 +135,28 @@
           <h2 class="team">Чем мы занимаемся</h2>
           <ul class="work">
             <li class="work-foto">
-              <img
-                src="./images/workplace-1.jpg"
-                width="370"
-                alt="рабочее место-1"
-              />
+              <div class="work-thumb">
+                <img src="./images/workplace-1.jpg" width="370" height="294" alt="рабочее место-1"/>
+                <div class="work-text">
+                  <p class="work-label">Десктопные приложения</p>
+                </div>
+              </div>    
             </li>
             <li class="work-foto">
-              <img
-                src="./images/workplace-2.jpg"
-                width="370"
-                alt="рабочее место-2"
-              />
+              <div class="work-thumb">
+                 <img src="./images/workplace-2.jpg" width="370" height="294" alt="рабочее место-2"/>
+                 <div class="work-text">
+                   <p class="work-label">Мобильные приложения</p>
+                 </div>
+              </div>
             </li>
             <li class="work-foto">
-              <img
-                src="./images/workplace-3.jpg"
-                width="370"
-                alt="рабочее место-3"
-              />
+               <div class="work-thumb">
+                 <img src="./images/workplace-3.jpg" width="370" height="294" alt="рабочее место-3"/>
+                 <div class="work-text">
+                   <p class="work-label">Дизайнерские решения</p>
+                 </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -436,5 +439,7 @@
         </div>
       </div>
     </footer>
+  <div class="backdrop"></div>
+  <script src="./js/modal.js"></script>
   </body>
 </html>

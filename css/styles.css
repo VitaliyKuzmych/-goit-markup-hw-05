@@ -69,7 +69,6 @@ p {
   color: var(--accent-color);
 }
 
-
 /* site-naw */
 .list {
   list-style: none;
@@ -85,6 +84,10 @@ p {
   padding-bottom: 32px;
   text-decoration: none;
   color: var(--primary-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .decoration {
@@ -92,6 +95,11 @@ p {
   color: var(--title-text-color);
   display: flex;
   align-items: center;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .site-nav {
@@ -131,6 +139,22 @@ p {
 .colorhov:hover,
 .colorhov:focus {
   color: var(--accent-color);
+}
+
+.site-nav .link.current {
+  position: relative;
+  color: var(--accent-color);
+}
+
+.link.current::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  border: 2px solid var(--accent-color);
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 /* Hero */
@@ -358,6 +382,31 @@ p {
   border-radius: 0px 0px 4px 4px;
 }
 
+.work-thumb {
+  position: relative;
+  height: 294px;
+}
+
+.work-text {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  left: 0;
+  bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.work-label {
+  color: var(--primery-bg-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 27px;
+}
+
 /* блок соц мереж команди та футера*/
 
 .list-icon {
@@ -383,7 +432,11 @@ p {
   height: 100%;
   border-radius: 50%;
   color: var(--icon-color);
-  background-color: var(--bg-icon-color)
+  background-color: var(--bg-icon-color);
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon {
@@ -422,6 +475,10 @@ p {
   border: 1px solid var(--clients-color);
   border-radius: 4px;
   color: var(--clients-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
@@ -471,6 +528,10 @@ p {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-list:hover,
@@ -521,14 +582,6 @@ p {
 }
 
 /* portfolio */
-
-/* колір порфоліо хедер */
-
-.akcent {
-  color: var(--accent-color);
-}
-
-/* оснвний css порфоліо */
 
 .works a {
   list-style: none;
@@ -588,6 +641,10 @@ p {
 
 .newpad {
   padding: 6px 22px;
+
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .newpad:hover,
@@ -601,6 +658,10 @@ p {
 
 .element {
   border: 1px solid #EEEEEE;
+
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .element:hover,
@@ -610,6 +671,54 @@ p {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.element-pic:hover .element-anim {
+  opacity: 1;
+}
+
+.element-pic:hover::before {
+  opacity: 1;
+}
+
 .works .item {
   padding: 20px 24px;
+}
+
+.element-pic {
+  position: relative;
+}
+
+.element-pic::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+
+.element-anim {
+  position: absolute;
+  padding: 63px 24px;
+  left: 0px;
+  bottom: 0px;
+  opacity: 0;
+}
+
+.element-text {
+  color: var(--primery-bg-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+}
+
+/* modal window */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
 }
